@@ -23,7 +23,7 @@ export default function AuthForm() {
                 Enter your email and password below to login your account
               </p>
             </div>
-            <UserAuthForm />
+            <UserAuthForm/>
           </div>
         </div>
       </div>
