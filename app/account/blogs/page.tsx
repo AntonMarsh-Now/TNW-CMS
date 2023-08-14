@@ -52,7 +52,7 @@ export default function BlogPage() {
                     image={blog.blog_bg}
                     title={blog.title}
                     description={limitText(blog.blog_content, 50)}
-                    href={`/account/blogs/${blog.id}`}
+                    href={`account/blogs/${blog.id}`}
                   />
                 );
               })}
