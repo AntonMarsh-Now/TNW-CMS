@@ -755,3 +755,137 @@ export const createTestimonial = async (
     console.log(error);
   }
 };
+
+
+export const fetchShowcases = async (supabase: SupabaseClient) => {
+  try {
+    const { data, error } = await supabase.from("showcases").select("*");
+
+    if (error) throw error;
+
+    return data as Showcase[];
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const createShowcase = async (
+  supabase: SupabaseClient,
+  image: File,
+  description: string,
+  toast: any
+) => {
+  try {
+    const showcaseFolder = "showcases";
+
+    const imageURL = await uploadImages(image, supabase, showcaseFolder);
+
+    const { data, error } = await supabase
+      .from("showcases")
+      .insert([
+        {
+          image: imageURL,
+          description: description,
+        },
+      ])
+      .select();
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+
+      return false;
+    } else {
+      toast({
+        title: "Success",
+        description: "Showcase created successfully",
+      });
+
+      return true;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const updateShowcase = async (
+  supabase: SupabaseClient,
+  id: string,
+  image: File,
+  description: string,
+  toast: any,
+  oldImage: string
+) => {
+  try {
+    const showcaseFolder = "showcases";
+
+    let imageURL = image;
+
+    if (image !== undefined) {
+      await removeImageFromBucket(supabase, "showcases", [oldImage]);
+      imageURL = await uploadImages(image, supabase, showcaseFolder);
+    }
+
+    const { error } = await supabase
+      .from("showcases")
+      .update({
+        image: imageURL,
+        description: description,
+      })
+      .eq("id", id);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+
+      return false;
+    } else {
+      toast({
+        title: "Success",
+        description: "Showcase updated successfully",
+      });
+
+      return true;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const deleteShowcase = async (
+  supabase: SupabaseClient,
+  id: string,
+  toast: any,
+  oldImage: string
+) => {
+  try {
+    await removeImageFromBucket(supabase, "showcases", [oldImage]);
+
+    const { error } = await supabase.from("showcases").delete().eq("id", id);
+
+    if (error) {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+
+      return false;
+    } else {
+      toast({
+        title: "Success",
+        description: "Showcase deleted successfully",
+      });
+
+      return true;
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
