@@ -26,7 +26,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Promotions
+          Adds
         </Link>
         <Link
           href="/account/blogs"
@@ -37,7 +37,7 @@ export function MainNav() {
               : "text-foreground/60"
           )}
         >
-          Blogs
+          Articles
         </Link>
   
 
