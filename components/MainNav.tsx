@@ -17,6 +17,15 @@ export function MainNav() {
       </Link>
       <nav className="flex items-center space-x-6 text-sm font-medium">
 
+      <Link
+          href="/account/testimonials"
+          className={cn(
+            "hidden text-foreground/60 transition-colors hover:text-foreground/80 lg:block"
+          )}
+        >
+          Home
+        </Link>
+  
         <Link
           href="/account/promotions"
           className={cn(
@@ -39,7 +48,7 @@ export function MainNav() {
         >
           Articles
         </Link>
-  
+
 
       </nav>
     </div>
