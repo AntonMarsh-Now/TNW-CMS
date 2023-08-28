@@ -71,7 +71,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
 
   return (
     <div className="container py-10 min-h-screen flex flex-row space-x-5">
-      <div className="w-[40%] h-screen overflow-y-auto p-1 no-scrollbar">
+      <div className="w-[45%] h-screen overflow-y-auto p-1 no-scrollbar">
         <div className="flex flex-row items-center justify-between">
           <Button
             disabled={buttonLoading}
@@ -225,7 +225,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
               />
             </div>
             <Separator />
-            <div className="grid gap-3">
+            <div className="grid gap-3 ">
               <Label htmlFor="blogContent">Article Content</Label>
               <Textarea
                 id="blogContent"
