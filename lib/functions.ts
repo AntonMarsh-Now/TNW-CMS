@@ -379,7 +379,7 @@ export const updateBlog = async (
     } else {
       toast({
         title: "Success",
-        description: "Blog updated successfully",
+        description: "Article updated successfully",
       });
     }
   } catch (error) {
@@ -410,7 +410,7 @@ export const deleteBlog = async (
     } else {
       toast({
         title: "Success",
-        description: "Blog deleted successfully",
+        description: "Article deleted successfully",
       });
     }
   } catch (error) {
@@ -453,7 +453,7 @@ export const createBlog = async (
     } else {
       toast({
         title: "Success",
-        description: "Blog created successfully",
+        description: "Article created successfully",
       });
       return data[0].id;
     }

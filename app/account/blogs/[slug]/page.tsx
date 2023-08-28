@@ -141,7 +141,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
         <div className="flex flex-col mt-10 space-y-5">
           <form className="flex flex-col space-y-5">
             <div className="grid gap-3">
-              <Label htmlFor="blogBg">Blog Background Image</Label>
+              <Label htmlFor="blogBg">Article Image</Label>
               {imageFile && checkIfImageIsBig(imageFile) && (
                 <Label className="text-xs text-destructive" htmlFor="blogBg">
                   Image is quite big. This may affect performance.
@@ -160,7 +160,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
               />
             </div>
             <div className="grid gap-3">
-              <Label htmlFor="consultantImage">Blog Gallery</Label>
+              <Label htmlFor="consultantImage">Article Images</Label>
               <Input
                 id="consultantImage"
                 type="file"
@@ -187,7 +187,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
               />
             </div>
             <div className="grid gap-3">
-              <Label htmlFor="blogTitle">Blog Title</Label>
+              <Label htmlFor="blogTitle">Article Title</Label>
               <Input
                 id="blogTitle"
                 placeholder="Las Vegas"
@@ -200,7 +200,7 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
             </div>
             <Separator />
             <div className="grid gap-3">
-              <Label htmlFor="blogAuthor">Blog Author</Label>
+              <Label htmlFor="blogAuthor">Article Author</Label>
               <Input
                 id="blogAuthor"
                 placeholder="Jane Doe"
@@ -213,10 +213,10 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
             </div>
             <Separator />
             <div className="grid gap-3">
-              <Label htmlFor="blogCategory">Blog Category</Label>
+              <Label htmlFor="blogCategory">Article Category</Label>
               <Input
                 id="blogCategory"
-                placeholder="Our Blog"
+                placeholder="Our Article"
                 type="text"
                 disabled={isLoading}
                 defaultValue={blog?.category}
@@ -226,10 +226,10 @@ export default function BlogEdit({ params }: { params: { slug: string } }) {
             </div>
             <Separator />
             <div className="grid gap-3">
-              <Label htmlFor="blogContent">Blog Content</Label>
+              <Label htmlFor="blogContent">Article Content</Label>
               <Textarea
                 id="blogContent"
-                placeholder="Expose your business to the world"
+                placeholder="Write your content here"
                 disabled={isLoading}
                 defaultValue={blog?.blog_content}
                 value={blogContent}

@@ -26,7 +26,7 @@ export default function BlogPage() {
     <div className="container py-10 h-fit flex flex-row space-x-10">
       <div className="w-full">
         <div className="flex flex-row items-center justify-between">
-          <div className="text-2xl">Blogs</div>
+          <div className="text-2xl">Articles</div>
           <CreateBlogButton />
         </div>
         <div className="mt-10 grid grid-cols-6 flex-col gap-5 ">

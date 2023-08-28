@@ -46,14 +46,14 @@ export function CreateBlogButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button onClick={() => {}} variant="outline">
-          New Blog
+          New Article
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Create new blog</DialogTitle>
+          <DialogTitle>Create new Article</DialogTitle>
           <DialogDescription>
-            Enter the blog title and pick an image for the blog background.
+            Enter the Article title and pick an image for the Article.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={onSubmit} className="grid gap-4 py-4">
@@ -88,7 +88,7 @@ export function CreateBlogButton() {
               {loading && (
                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
               )}
-              Create blog
+              Create Article
             </Button>
           </DialogFooter>
         </form>
