@@ -1,4 +1,5 @@
 "use client";
+window.location.href = "/account/blogs";
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 export default function Dashboard() {
@@ -11,4 +12,3 @@ export default function Dashboard() {
   );
 }
 
-window.location.href = "/account/blogs";
