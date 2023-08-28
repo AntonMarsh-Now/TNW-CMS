@@ -4,6 +4,7 @@ import { CreateBlogButton } from "@/components/CreateBlogButton";
 import { Skeleton } from "@/components/ui/skeleton";
 import { fetchBlogs, limitText } from "@/lib/functions";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { LucideListOrdered } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function BlogPage() {
@@ -28,7 +29,7 @@ export default function BlogPage() {
           <div className="text-2xl">Blogs</div>
           <CreateBlogButton />
         </div>
-        <div className="mt-10 grid grid-cols-6 gap-5">
+        <div className="mt-10 grid grid-cols-6 flex-col gap-5 ">
           {loading ? (
             <>
               {dummy.map((_, i) => {

@@ -5,8 +5,8 @@ export default function Dashboard() {
   const supabase = createClientComponentClient();
 
   return (
-    <div className="container">
-      <div>hey</div>
+    <div className="container mt-5 ml-20">
+      <div >Welcome</div>
     </div>
   );
 }
