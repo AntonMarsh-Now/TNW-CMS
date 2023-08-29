@@ -30,7 +30,7 @@ export default function TestimonialsPage() {
     <div className="container py-10 h-fit flex flex-row space-x-10 ">
       <div className="w-full">
         <div className="flex flex-row items-center justify-between">
-          <div className="text-2xl">Testimonials</div>
+          <div className="text-2xl">Home</div>
           <CreateTestimonialButton />
         </div>
         <div className="mt-10 grid grid-cols-6 gap-5">

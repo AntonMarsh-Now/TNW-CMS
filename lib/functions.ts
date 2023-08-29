@@ -305,7 +305,7 @@ export const checkIfImageIsBig = (file: File) => {
 
 export const fetchBlogs = async (supabase: SupabaseClient) => {
   try {
-    const { data, error } = await supabase.from("blogs").select("*");
+    const { data, error } = await supabase.from("blogs").select("*").order("id", { ascending: false });
 
     if (error) throw error;
 

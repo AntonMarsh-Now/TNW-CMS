@@ -46,14 +46,14 @@ export function CreateTestimonialButton() {
     <Dialog>
       <DialogTrigger asChild>
         <Button onClick={() => {}} variant="outline">
-          New Testimonial
+          New Home
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>Create new testimonial</DialogTitle>
+          <DialogTitle>Create new Home</DialogTitle>
           <DialogDescription>
-            Enter the testimonials title and pick an image for the user.
+            Enter the home title and pick an image for the user.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={onSubmit} className="grid gap-4 py-4">
@@ -88,7 +88,7 @@ export function CreateTestimonialButton() {
               {loading && (
                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
               )}
-              Create testimonial
+              Create Home
             </Button>
           </DialogFooter>
         </form>
